@@ -2,7 +2,7 @@ group 'com.greenlionsoft'
 version '1.0.7'
 
 buildscript {
-    ext.kotlin_version = '1.2.21'
+    ext.kotlin_version = '1.2.30'
 
     repositories {
         mavenCentral()
