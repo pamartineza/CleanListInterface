@@ -1,8 +1,8 @@
 group 'com.greenlionsoft'
-version '1.0.7'
+version '1.0.9'
 
 buildscript {
-    ext.kotlin_version = '1.2.30'
+    ext.kotlin_version = '1.2.41'
 
     repositories {
         mavenCentral()
@@ -33,6 +33,14 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar
+}
 
 install {
     repositories.mavenInstaller {
